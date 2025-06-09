@@ -5,29 +5,46 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
 
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="stylesheet" href="style.css">
   
   <title>Frontend Mentor | Base Apparel coming soon page</title>
 
   <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
+
 </head>
 <body>
 
-  We're coming soon
+  <main class="container">
 
-  Hello fellow shoppers! We're currently building our new fashion store. 
-  Add your email below to stay up-to-date with announcements and our launch deals.
+    <div class="section">
+      <div class="logo"><img src="images/logo.svg" alt="logo.png"></div>
 
-  Email Address
+      <h1> We're <br><span>coming <br>soon</span></h1>
+      <p>Hello fellow shoppers! We're currently building our new fashion store. 
+        Add your email below to stay up-to-date with announcements and our launch deals.</p>
+
+      <div class="input-field">
+        <input type="email" placeholder="Email Address" id="email" required>
+        <img src="images/icon-error.svg" alt="error-icon" id="error-icon" class="error-icon">
+        <img src="images/icon-arrow.svg" alt="arrow" class="arrow" id="arrow-btn">
+      </div>
+      <div class="error-div hidden" id="error"></div>
+    </div>
+    
+
+    <div class="image">
+      <img src="images/hero-desktop.jpg" alt="">
+    </div>
+  </main>
+
   
   <footer>
     <p class="attribution">
       Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-      Coded by <a href="#">Your Name Here</a>.
+      Coded by <a href="#">Etinosa!</a>.
     </p>
   </footer>
+
+  <script src="script.js"></script>
 </body>
 </html>
