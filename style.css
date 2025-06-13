@@ -9,38 +9,40 @@
     body{
         font-family: "Josefin Sans", sans-serif;
         font-size: 16px;
-       background: 
-                linear-gradient(135deg, hsl(0, 0%, 100%), hsl(0, 100%, 98%)),
-                linear-gradient(135deg, hsl(0, 80%, 86%), hsl(0, 74%, 74%));
-        background-attachment: fixed;
-        background-size: cover;
+       background: linear-gradient(135deg, hsl(0, 0%, 100%), hsl(0, 100%, 98%));
         color: hsl(0, 30%, 70%);
-        height: 100vh;
     }
 
-    img{
-        height: 100%;
+    .image-mobile{
+        display: none;
+    }
+
+    
+    .logo{
+        position: absolute;
+        top: 60px;
+        left: 200px;
+        width: 150px;
+        height: 50px;
     }
 
     .container{
+        height: 100vh; 
+        display: flex;
+        flex-direction: row;  
+    }
+
+    .content {
         display: flex;
         flex-direction: row;
-        height: 100%;   
     }
 
-    .section{
-        flex: 1;
-        max-width: 900px;
-        margin: 60px 200px;
-    }
-
-    .logo{
-        width: 30px;
-        height: 30px;
+    .content .content-text{
+        margin: 90px 200px; 
     }
 
     h1{
-        margin-top: 120px;
+        margin: 4rem 0 1rem;
         font-size: 4rem;
         font-weight: 300;
         text-transform: uppercase;
@@ -63,16 +65,17 @@
         flex-direction: row;
         margin-top: 20px;
         position: relative;
-        width: 100%;
+        max-width: 500px;
     }
 
-    input{
+    .input-field input{
         padding: 15px 50px 15px 40px;
         border: 1px solid hsl(0, 36%, 70%);
         border-radius: 30px;
         font-size: 0.8rem;
         font-weight: 200;
         width: 100%;
+        outline: none;
     }
 
     input::placeholder {
@@ -120,6 +123,59 @@
         font-weight: 400;
         font-size: 0.8rem;
     }
+
+    .image-desktop{
+        display: block;
+        flex: 1;
+        height: 100vh;
+    }
+
+    .image-desktop img{
+        object-fit: cover;
+        height: 100%;
+    }
     
     .attribution { font-size: 11px; text-align: center; }
     .attribution a { color: hsl(228, 45%, 44%); }
+
+
+    @media screen and (max-width: 1024px) {
+        .container{
+            margin-top: 0rem;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .image-mobile {
+            display: block;
+        }
+
+        .image-mobile img {
+            width: 100%;
+            height: auto;
+        }
+
+        .image-desktop {
+            display: none;
+        }
+        .logo{
+            position: relative;
+            top: 0;
+            left: 0;
+            margin: 2rem 0 2rem 1.8rem;
+        }
+        .content {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+        .content-text{
+            text-align: center;
+        }
+        h1{
+            font-size: 3rem;
+        }
+
+
+}
